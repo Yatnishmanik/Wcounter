@@ -39,8 +39,8 @@ export default function Textarea(props) {
   </div>
   <div className="container my-3" style={{color:props.textmode==='hsl(216deg 16% 82%)'?'black':'white'}}>
     <h1>About Text </h1>
-    <p>words:{text.split(" ").length-1} Charaters:{text.length}</p>
-    <p>Reading Time:{0.008*text.split(" ").length} </p>
+    <p>words:{text.split(" ").filter((element)=>{return element.length!==0}).length} Charaters:{text.length}</p>
+    <p>Reading Time:{0.008*text.split(" ").filter((element)=>{return element.length!==0}).length} </p>
     <h2>preview:-</h2>
     <h6>{text}</h6>
   </div>
